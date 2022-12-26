@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example2.gamememory.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_gameFragment8x8"
+            app:destination="@id/gameFragment8x8" />
+        <action
+            android:id="@+id/action_mainFragment_to_gameFragment6x6"
+            app:destination="@id/gameFragment6x6" />
+        <action
+            android:id="@+id/action_mainFragment_to_gameFragment6x62"
+            app:destination="@id/gameFragment6x6" />
+        <action
+            android:id="@+id/action_mainFragment_to_gameFragment4x4"
+            app:destination="@id/gameFragment4x4" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example2.gamememory.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="list"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment4x4"
+        android:name="com.example2.gamememory.GameFragment4x4"
+        android:label="fragment_game_fragment4x4"
+        tools:layout="@layout/fragment_game_fragment4x4" >
+        <action
+            android:id="@+id/action_gameFragment4x4_to_finishFragment"
+            app:destination="@id/finishFragment" />
+        <action
+            android:id="@+id/action_gameFragment4x4_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="list"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment6x6"
+        android:name="com.example2.gamememory.GameFragment6x6"
+        android:label="fragment_game_fragment6x6"
+        tools:layout="@layout/fragment_game_fragment6x6" >
+        <action
+            android:id="@+id/action_gameFragment6x6_to_finishFragment"
+            app:destination="@id/finishFragment" />
+        <action
+            android:id="@+id/action_gameFragment6x6_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="list"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment8x8"
+        android:name="com.example2.gamememory.GameFragment8x8"
+        android:label="fragment_game_fragment8x8"
+        tools:layout="@layout/fragment_game_fragment8x8" >
+        <action
+            android:id="@+id/action_gameFragment8x8_to_finishFragment"
+            app:destination="@id/finishFragment" />
+        <action
+            android:id="@+id/action_gameFragment8x8_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="list"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.example2.gamememory.FinishFragment"
+        android:label="fragment_finish"
+        tools:layout="@layout/fragment_finish" >
+        <action
+            android:id="@+id/action_finishFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
